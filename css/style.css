@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+    border: 1px red solid;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    background-color: darkgray;
+    padding: 5px;
+}
+#icono{
+    width: 30px;
+    height: 30px;
+    background-color: darkorange;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+#icono i{
+    margin: auto;
+}
+.barra{
+    background-color: darkred;
+    padding: 20px;
+}
+.barra ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.barra ul li{
+    list-style: none;
+    border: 1px green solid;
+}
+.barra ul li a{
+    padding: 10px 15px;
+    display: inline-block;/*para que no se monten*/
+    color: white;
+    text-decoration: none;
+}
+.barra ul li a:hover{
+    background-color: #333;
+}
+#flecha{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    right: 0;
+    background-color: blueviolet;
+
+}
+#flecha i{
+    color: white;
+}
+
+@media screen and (max-width:480px){
+    #icono{
+        display: flex;
+
+    }
+    .barra{
+        position: relative;
+    }
+    .barra ul{
+        flex-direction: column;
+        gap: 0;
+        justify-content: start;
+        align-items: start;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        width: 100%;
+    }
+    .barra ul li{
+        padding: 5px;
+        width: 100%;
+
+    }
+    nav ul.abrir_menu{
+        left: 0;
+    }
+}
